@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">          <!--" if_aninhado"_e_um_if_dentro_de_outro -->
+    <title>if_aninhado_javascript</title>
+    <script>
+        var nota = 100;                                                                
+        var res;        // variavel_criada_para_facilitar_a_logica                         
+                                                                                        
+        if( nota >= 60) {
+            res = "Aprovado";                // "aprovado"_atribuido_a_variavel_"res"
+            if(nota >= 95) {
+                if(nota == 100) {
+                    res += " com excelencia...";
+                } else {
+                    res += " com louvor...";
+
+                }
+            } else {
+                res += " com nota normal...";
+            }
+        } else if(nota >= 40) {
+            res = "Recuperacao...";
+        } else {
+            res = "Reprovado";          // "Reprovado"_atribuido_a_variavel_"res"
+            if(nota >= 20) {
+                res += " por nota baixa...";
+            } else {
+                res += " com louvor...";    
+            }
+        
+        }
+
+        document.write(res);        // imprimindo_a_variavel_"res"_resultante
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
