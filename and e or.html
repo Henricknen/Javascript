@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>and-or_Javascript</title>
+    <script>
+        var pontos = 40;
+        var energia = 60;
+        // vitoria ->  ((>= 30 && <= 40))  ||  ((>= 70 && <= 80))         
+
+        if(                                     
+            ((pontos >= 30) && (pontos <= 40)&&(energia >= 40)) || ((pontos >= 70) && (pontos <= 80) &&(energia > 40))      // testando_multiplas_variaveis_operadores_logicos_&&-"end"_e_||-"or"
+        ) {
+            document.write("Ganhou....");
+        } else {
+            document.write("Perdeu...")
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
