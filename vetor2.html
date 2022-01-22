@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodos_Javascript</title>
+    <script>
+
+        var mochila = [];
+
+        mochila.push("Faca");                        // metodo_"push"_faz_a_insercao_dos_elementos_no_final_do_array
+        mochila.push("Corda");  
+        mochila.push("Pedeneira");      
+        mochila.push("Chave");
+        mochila.push("Lanterna");
+        mochila.unshift("Pedra");                   // metodo_"unshift"_insere_na_primeira_posicao_do_array
+
+        mochila.pop();                    // "pop"_remove_o_ultimo_elemento_do_array
+
+        mochila.shift();                  // "shift"_e_semelhante_ao_"pop"_mas_ao_inves_de_remover_o_ultimo_elemento,_ele_reemove_o primeiro
+
+        mochila.splice(2, 1);             // "splice"_escolhe_aparti_de_qual_item_e_a_quantidade_a_ser_removido
+
+        document.write(mochila[0] + "<br>");
+        document.write(mochila[1] + "<br>");     
+        document.write(mochila[2] + "<br>");        // impressao_dos_itens_da_variavel_"mochila"
+        document.write(mochila[3] + "<br>");
+        document.write(mochila[4] + "<br>");
+        document.write(mochila[5] + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
