@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodos_Javascript</title>
+    <script>
+
+    var mochila = [], pos;
+    var mochilaTot = [], mochila1 = [], mochila2 = [], pos;
+    var num = [5, 8, 4, 9, 3, 1, 7, 2, 6, 0];
+    var numeros;
+
+    num.sort();     // "sort"_faz_a_ordenacao_crescente_dos_elementos_do_array
+    num.reverse();      // "reverse"_faz_a_ordencao_em_ordem_decrescente
+
+    numeros = num.join();       // "join"_junta_todos_elementos_de_um_array_em_uma_variavel_so,_em_forma_de_String_separada_por_virgulas
+    document.write(numeros + "<br>");
+
+    mochila.push("Faca<br>");                     
+    mochila.push("Corda<br>");  
+    mochila.push("Pedeneira<br>");      
+    mochila.push("Chave<br>");
+    mochila.push("Lanterna<br>");
+    mochila.unshift("Pedra<br>");  
+    
+    mochila1.push("Lapis");                     
+    mochila1.push("Caneta");  
+    mochila1.push("Caderno");      
+    mochila1.push("Borracha");
+    mochila1.push("Regua");
+
+    mochila2.push("Pen drive");                     
+    mochila2.push("Teclado");  
+    mochila2.push("Gabinete");      
+    mochila2.push("Monitor");
+    mochila2.push("mouse");
+
+    mochila1.pop();     // remove_o_ultimo_elemento_da_mochila1
+
+    mochilaTot = mochila1.concat(mochila2);     // "concat"_junta_todos_elementos_de_mochila1_e_mochila2_em_mochilaTot
+
+    document.write(mochilaTot[0] + "<br>");
+    document.write(mochilaTot[1] + "<br>");
+    document.write(mochilaTot[2] + "<br>");
+    document.write(mochilaTot[3] + "<br>");
+    document.write(mochilaTot[4] + "<br>");
+    document.write(mochilaTot[5] + "<br>");
+    document.write(mochilaTot[6] + "<br>");
+    document.write(mochilaTot[7] + "<br>");
+    document.write(mochilaTot[8] + "<br>");
+    document.write(mochilaTot[9] + "<br>");
+
+    document.write("Tamanho da mochia1: " + mochila1.length + "<br>");        
+    document.write("Tamanho da mochia2: " + mochila2.length + "<br>");      // "length"_retorna_o_tamanho_de_um_array
+    document.write("Tamanho da mochiaTot: " + mochilaTot.length + "<br>");
+
+
+    document.write(mochila.indexOf("Lanterna<br>"));        // "indexOf"_serve_para_verificar_se_um_elemento_esta_no_array
+    
+    pos = mochila.indexOf("Arame");        // verificar_o_item_e_a_sua_posicao
+
+    if (pos < 0) {
+        document.write("<br>Item não esta na mochila<br>");
+    } else {
+        document.write("<br>Item esta na mochila<br>Posição: " + pos);
+    }
+
+    document.write(num[0] + "<br>");
+    document.write(num[1] + "<br>");
+    document.write(num[2] + "<br>");
+    document.write(num[3]  + "<br>");
+    document.write(num[4] + "<br>");
+    document.write(num[5] + "<br>");
+    document.write(num[6] + "<br>");
+    document.write(num[7] + "<br>");
+    document.write(num[8] + "<br>");
+    document.write(num[9] + "<br>");
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
