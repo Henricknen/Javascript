@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop-for_Javascript</title>
+    <script>
+
+        var mochila = [
+            ["corda", 1],
+             ["prego", 2],      // estrutura_for_para_percorre_matrizes
+
+              ["martelo", 13],
+               ["chaves", 20]
+               ];  
+
+        var num = [];       // arrray_"num"
+
+        //num.push(0);
+        //num.push(1);        // "push"_adiciona_valores_ao_final_do_array
+        //num.push(2);
+        //num.push(3);
+        //num.push(4);
+
+        for(cont = 0; cont < 10; cont++) {     // tres_parametros_de_configuracao_(inicio, condicao, incremento ou decremento)
+            document.write("Luis henrique silva ferreira...<br>");
+        }
+
+        /*for(cont = 0; cont < 5; cont ++) {
+            document.write(num[cont] + "<br>");
+        }*/
+        
+        for(var l = 0; l < 4; l ++) {
+            for(var c = 0; c < 2; c++) {
+                document.write(mochila[l][c] + " ") ;
+            }
+            document.write("<br>");
+        }
+
+        for(var cont = 0; cont < 5; cont ++) {
+            num.push(prompt("Digite um numero: ", ""));
+        }
+
+        for(cont = 0; cont < 5; cont++) {
+            document.write(num[cont] + "<br>")
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
