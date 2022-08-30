@@ -1,0 +1,1 @@
+console.log("rondando este arquivo js fora do Browser");
