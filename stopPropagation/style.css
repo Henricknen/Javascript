@@ -1,0 +1,59 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    width: 150px;
+    background-color: #025;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.repositorio {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid #888;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.c1 {
+    background-color: #ccc;
+}
+
+.c2 {
+    background-color: #444;
+    color: #ccc;
+}
+
+.selecionado {
+    background-color: #800 !important;      /* '!important' serve para estás propriedades substituirem as propriedades atuais */
+    color: #fcc !important;     
+    border-color: #f00 !important;
+}
+
+.caixa {
+    border: 4px solid #000;
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 300px;
+}
