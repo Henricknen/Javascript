@@ -4,12 +4,17 @@ const c1_2 = document.querySelector("#c1_2")
 const cursos = ["HTML","CSS","Javascript","PHP","React","MySQL","ReactNative"]
 const btnCursoSelecionado = document.getElementById("btnCursoSelecionado")      // botão de 'seleção' de curso
 const btnRemoveCurso = document.getElementById("btnRemoveCurso")        // botão de 'remoção' de curso
+const btnAdicionarNovoRepositorioAntes = document.getElementById("btnAdicionarNovoRepositorioAntes")
+const btnAdicionarNovoRepositorioDepois = document.getElementById("btnAdicionarNovoRepositorioDepois")
+const nomeCurso = document.getElementById("nomeCurso")
 
-cursos.map((el,chave)=>{
+let indice = 0      // vatável 'indice' que vai dar a posição do elemento
+
+const criarNovoRepositorio =(repositorio)=> {        // função para criar novo repositorio
     const novoElemento=document.createElement("div")
-    novoElemento.setAttribute("id","c"+chave)
+    novoElemento.setAttribute("id","c"+ indice)
     novoElemento.setAttribute("class","curso c1")
-    novoElemento.innerHTML=el
+    novoElemento.innerHTML = repositorio
 
     const comandos=document.createElement("div")
     comandos.setAttribute("class","comandos")
@@ -22,7 +27,14 @@ cursos.map((el,chave)=>{
 
     novoElemento.appendChild(comandos)
 
+    return novoElemento
+}
+
+cursos.map((el,chave)=>{
+
+    const novoElemento = criarNovoRepositorio(el)
     caixaCursos.appendChild(novoElemento)
+    indice ++       //atualizando a posição do 'indice'
     
 })
 
@@ -56,9 +68,33 @@ btnRemoverCurso.addEventListener("click",(evt)=>{       // ultilizando evento de
     
 })
 
-// parentNode
-// childNodes[nodenumber]
-// firstChild
-// lastChild
-// nextSibling
-// previousSibling
+btnAdicionarNovoRepositorioAntes.addEventListener("click", (evt)=>{
+    const rs = radioSelecionado()          // 'radioSlecionado' vai obter o conteudo da função 'cursoSelecionado'
+    if(rs != undefined) {
+        if(nomeCurso.value != "") {
+            const cursoSelecionado = rs.parentNode.parentNode
+            const novoRepositorio = criarNovoRepositorio(nomeCurso.value)
+            caixaCursos.insertBefore(novoRepositorio, cursoSelecionado)     // fazendo 'inserção' antes do repositorio seleçionado
+        } else {
+            alert("Digite o nome do curso...")
+        }
+        
+    } else {
+        alert("Seleçione um repositorio...")
+    }
+})
+
+btnAdicionarNovoRepositorioDepois.addEventListener("click", (evt)=>{
+    const rs = radioSelecionado()          // 'radioSlecionado' vai obter o conteudo da função 'cursoSelecionado'
+    if(rs != undefined) {
+        if(nomeCurso.value != "") {
+            const cursoSelecionado = rs.parentNode.parentNode
+            const novoRepositorio = criarNovoRepositorio(nomeCurso.value)
+            caixaCursos.insertBefore(novoRepositorio, cursoSelecionado.nextSibling)     // fazendo 'inserção' depois do repositorio seleciondo com 'nextSibling'
+        } else {
+            alert("Digite o nome do curso...")
+        }
+    } else {
+        alert("Seleçione um repositorio...")
+    }
+})
