@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toggle</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <div id="caixaNovoFuncionalidades" class="caixa">
+                <div id="caixaNovoCurso" class="caixaFuncionalidades">
+                    <label>Repositorio</label>
+                    <input type="text" name="nomeCurso" id="nomeCurso"/>
+                    <button id="btnAdicionarNovoRepositorioAntes">Adicionar Antes</button><br>
+                    <button id="btnAdicionarNovoRepositorioDepois">Adicionar Depois</button>
+                </div>
+                <div id="caixaRemoverCurso" class="caixaFuncionalidades">
+                    <button id="btnRemoverCurso">Remover Selecionado</button>
+                </div>
+                <div id="caixaCursoSelecionado" class="caixaFuncionalidades">
+                    <button id="btnCursoSelecionado">repositorios Selecionado</button>
+                </div>
+            </div>
+            <div id="caixaCursos" class="caixa">
+                <!-- repositorios serão adicionados aqui -->
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
+
