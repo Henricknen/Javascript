@@ -14,12 +14,13 @@
     border-radius: 5px;
 }
 
-.carros {
+.carro {
     border: 3px #008 solid;
     background-color: #8cf;
     padding: 5px;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
     width: 200px;
 }
 

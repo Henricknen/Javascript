@@ -9,6 +9,12 @@ const btn_addCarro = document.querySelector("#btn_addCarro")
 
 let a_carros = []
 
+const removerCarro =(quem)=> {
+    a_carros = a_carros.filter((el)=> {        // 'filter' espeçifica uma fitragem
+        return el.nome != quem
+    })    
+}
+
 f_tipoMilitar.addEventListener("click", (evt)=> {       // quando 'militar' for clicado
     f_nome.value = ""
     f_portas.value = 0
@@ -31,13 +37,25 @@ const gerenciarExibicaoCarros =()=> {       // função 'gerenciarExibicaoCarros
     carros.innerHTML = ""       // zerará o conteudo de 'carros'
     a_carros.forEach((c) => {
         const div = document.createElement("div")   //criará novo carro
+        const btn = document.createElement("button");       // criação de botão para remover
+        btn.innerHTML = "remover"
+        btn.addEventListener("click",(evt)=> {        // evento de 'click'
+            const quemSeraRemovido = evt.target.parentNode.dataset.nome
+            removerCarro(quemSeraRemovido)      // passando para função 'quemSeraRemovido' para remoção
+            console.log(a_carros)
+            gerenciarExibicaoCarros()     // depois da remoção chamar novamente a propria função 'gerenciarExibicaoCarros'
+        })
+
         div.setAttribute("class", "carro")
+        div.setAttribute("data-nome", c.nome)
         div.innerHTML = `Nome: ${c.nome}<br/>`
         div.innerHTML += `Portas: ${c.portas}<br/>`
         div.innerHTML += `Cor: ${c.cor}<br/>`
         div.innerHTML += `Blindagem: ${c.blindagem}<br/>`
         div.innerHTML += `Municao: ${c.municao}<br/>`
+        div.appendChild(btn)
         carros.appendChild(div)     // 'appendChild' mostrará todos carros que estão no array carros
+        
     })
 }
 
