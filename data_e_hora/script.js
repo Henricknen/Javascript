@@ -11,8 +11,25 @@ mes = mes < 10 ? "0" + mes: mes
 
 
 const data_r = dia + "/" + mes + "/" + data.getFullYear()
-
 div_data.innerHTML = data_r
+
+const relogio=()=> {
+    const data = new Date()     // data competa
+    let hora = data.getHours()      // hora da data
+    hora = hora < 10 ? "0" + hora: hora
+
+    let minutos = data.getMinutes()      // minutos da data
+    minutos = minutos < 10 ? "0" + minutos: minutos
+
+    let segundos = data.getSeconds()      // segundos da data
+    segundos = segundos < 10 ? "0" + segundos: segundos
+
+    const hora_completa = hora +":" +minutos+ ":" +segundos
+    div_relogio.innerHTML = hora_completa       // atualizando o valor da 'div_relogio'
+    
+}
+
+const intervalo = setInterval(relogio,1000)       // função 'setInterval' chama a função 'relogio' a cada 1 segundo
 
 // getDate()   = Dia do mês
 // getDay() = Dia da semana (número)
