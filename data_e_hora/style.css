@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #888;
+}
+
 .div_relogio {
     display: flex;
     justify-content: center;
@@ -16,4 +28,24 @@
     font-size: large;
     padding: 10px;
     border-radius: 5px;
+}
+
+input[type = 'number'] {
+    border: 1px solid #000;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: #aaaa;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarme {
+    background-color: #f00 !important;
 }

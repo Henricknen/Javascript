@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DATA_E_hora</title>
+    <title>TIMER_COM_ALARME</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="div_data"></div>
-    <div id="div_relogio" class="div_relogio">00:00:00</div>
+    <div id="timer" class="timer">
+        <div id="div_data"></div>
+        <div id="div_relogio" class="div_relogio">00:00:00</div>
+        <div id="def_alarme" class="def_alarme">
+            <label id="hora_alarme">Hora do alarme</label></div>
+            <input type="number" id="tmp_alarme" value="0" min="0">
+        </div>
+        <div id="comandos" class="comandos">
+            <button id="btn_ativar">Ativar</button>
+            <button id="btn_parar">Parar</button>
+        </div>    
+    </div>
     <script src="script.js"></script>
-</body>
+    </body>
 </html>
