@@ -28,17 +28,32 @@ class Bola {        // classe 'Bola'
         this.desenhar()     // chamando a função 'desenhar'
         this.controle = setInterval(this.controlar, 10)     // 'setInterval' chama a função controlar a cada 10 segundos
         this.eu = document.getElementById(this.id)
+        numBola++
+        num_objetos.innerHTML = numBola     // preechendo 'num_objetos' o valor da variável 'numBola'
     }
 
     minhaPos=()=> {     // métodos
-        
+        return this.arrayBolas.indexOf(this)        // retorna a posição de 'this'dentro do container Bola
     }
     remover=()=> {
+        clearInterval(this.controle)        // para a bolinha na tela
+        bolas = bolas.filter((b)=> {
+            if(b. id != this.id) {
+                return b
+            }
+        })
+        this.eu.remove()        // removendoo do 'DOM'
+        numBola--       // atualizando o array com o número de bolas
+        num_objetos.innerHTML = numBola     // atualizando o 'display'
 
     }
 
     desenhar=()=> {
-
+        const div = document.createElement("div")       // crianção da div 'bolinha'
+        div.setAttribute("id", this.id)
+        div.setAttribute("class", "bola")
+        div.setAttribute("style", `left: ${this.px}; top: ${this.py}; width: ${this.tam}; height: ${this.tam}; background-color: rgb(${this.r}, ${this.g}, ${this.b}`)      // adiçionado 'style' de todas propriedades definas como variáveis
+        this.palco.appendChild(div)        // adiçionando no 'DOM'
     }
 
     controlar=()=> {
